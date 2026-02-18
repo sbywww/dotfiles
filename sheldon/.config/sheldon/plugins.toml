@@ -1,0 +1,13 @@
+shell = "zsh"
+
+# 자동 완성 제안 (히스토리 기반)
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+# 명령어 구문 강조
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+
+# 추가 completion 모음
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"

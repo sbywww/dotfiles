@@ -1,0 +1,39 @@
+[core]
+	autocrlf = input
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = true
+
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[push]
+	default = current
+[merge]
+	conflictstyle = diff3
+[diff]
+	algorithm = patience
+	colorMoved = default
+
+[alias]
+	s = status
+	d = diff
+	dc = diff --cached
+	co = checkout
+	nb = checkout -b
+	b = branch -v
+	c = commit -m
+	ca = commit -am
+	l = log --graph --date=short --pretty=format:'%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %s %C(magenta)[%an]%Creset'
+	pl = pull
+	ps = push
+	last = diff HEAD^
+	unstage = reset HEAD
+	uncommit = reset --soft HEAD^
+
+[include]
+	path = ~/.gitconfig.user

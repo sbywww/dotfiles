@@ -1,0 +1,20 @@
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[mgr]
+ratio          = [ 2, 4, 3 ]     # 부모:현재:미리보기 비율
+sort_by        = "alphabetical"
+sort_dir_first = true             # 폴더 먼저 표시
+show_hidden    = true             # 숨김 파일 표시
+show_symlink   = true
+scrolloff      = 5                # 커서 상하 여백
+mouse_events   = [ "click", "scroll" ]
+title_format   = "Yazi: {cwd}"
+
+[preview]
+wrap       = "no"
+tab_size   = 2
+max_width  = 1200
+max_height = 1000
+
+[input]
+cursor_blink = false

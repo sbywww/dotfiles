@@ -1,0 +1,40 @@
+# fonts
+# font-family = "MesloLGS NF"
+font-family = "JetBrainsMonoNL Nerd Font"
+font-family = "Noto Sans KR"
+font-size = 14
+font-synthetic-style = bold,italic,bold-italic
+
+# theme
+theme = TokyoNight Night
+
+# Font and cell adjustments for Korean text
+adjust-cell-width = 0%
+adjust-cell-height = 35%
+grapheme-width-method = unicode
+
+# shell integration & cursor
+shell-integration-features = no-cursor,sudo,no-title
+cursor-style = block
+
+# mouse
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+# window
+window-padding-balance = true
+window-save-state = always
+window-colorspace = "display-p3"
+macos-titlebar-style = hidden
+
+# background
+background-opacity = 0.88
+background-blur-radius = 25
+background = #000000
+
+# clipboard
+copy-on-select = clipboard
+
+# macOS Option 키를 Alt로 사용 (fzf Alt+C 등)
+macos-option-as-alt = true
+
