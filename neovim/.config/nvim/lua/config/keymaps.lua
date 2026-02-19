@@ -3,9 +3,6 @@
 
 local keymap = vim.keymap.set
 
--- Insert → Normal: jk (한국어 사용자는 Caps Lock이 한영전환이므로 jk 사용)
-keymap("i", "jk", "<ESC>", { desc = "Exit insert mode" })
-
 -- 반 페이지 스크롤 + 센터링
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
