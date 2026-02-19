@@ -1,12 +1,12 @@
 # fonts
 # font-family = "MesloLGS NF"
-font-family = "JetBrainsMonoNL Nerd Font"
+font-family = "JetBrainsMono Nerd Font"
 font-family = "Noto Sans KR"
 font-size = 14
 font-synthetic-style = bold,italic,bold-italic
 
 # theme
-theme = Gruvbox Dark
+theme = TokyoNight Night
 
 # Font and cell adjustments for Korean text
 adjust-cell-width = 0%
@@ -30,7 +30,7 @@ macos-titlebar-style = hidden
 # background
 background-opacity = 0.88
 background-blur-radius = 25
-# background = #000000
+background = #000000
 
 # clipboard
 copy-on-select = clipboard
