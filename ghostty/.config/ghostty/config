@@ -6,7 +6,7 @@ font-size = 14
 font-synthetic-style = bold,italic,bold-italic
 
 # theme
-theme = TokyoNight Night
+theme = Gruvbox Dark
 
 # Font and cell adjustments for Korean text
 adjust-cell-width = 0%
@@ -30,7 +30,7 @@ macos-titlebar-style = hidden
 # background
 background-opacity = 0.88
 background-blur-radius = 25
-background = #000000
+# background = #000000
 
 # clipboard
 copy-on-select = clipboard
