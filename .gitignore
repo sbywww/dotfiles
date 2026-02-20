@@ -1,1 +1,22 @@
-hammerspoon/.hammerspoon/apps.lua
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.*
+
+# Neovim
+neovim/.config/nvim/plugin/
+
+# Misc
+*.log
+*.bak
+*.tmp

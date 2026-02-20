@@ -31,7 +31,8 @@ brew "neovim"        # 하이퍼텍스트 에디터
 brew "fnm"           # Node.js 버전 매니저
 
 # ---- Cask: GUI 앱 ----
-cask "ghostty"       # GPU 가속 터미널 에뮬레이터
+cask "ghostty"              # GPU 가속 터미널 에뮬레이터
+cask "karabiner-elements"   # 키보드 커스터마이저
 
 # ---- Cask: 폰트 ----
 cask "font-jetbrains-mono-nerd-font"  # Nerd Font (터미널 + 에디터)
