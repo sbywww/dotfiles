@@ -16,6 +16,9 @@ Thumbs.db
 # Neovim
 neovim/.config/nvim/plugin/
 
+# Karabiner
+karabiner/.config/karabiner/automatic_backups/
+
 # Misc
 *.log
 *.bak
