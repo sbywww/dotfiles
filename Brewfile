@@ -29,6 +29,7 @@ brew "neovim"        # 하이퍼텍스트 에디터
 
 # ---- CLI 도구: 런타임 & 개발 ----
 brew "fnm"           # Node.js 버전 매니저
+brew "jdtls"         # Java LSP (Eclipse JDT Language Server)
 
 # ---- Cask: GUI 앱 ----
 cask "ghostty"              # GPU 가속 터미널 에뮬레이터
