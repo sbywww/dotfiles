@@ -1,5 +1,21 @@
 #!/bin/bash
 
+# SDKMAN 설치 (Java, Maven, Gradle, Kotlin 버전 관리)
+if [ ! -d "$HOME/.sdkman" ]; then
+  echo "Installing SDKMAN..."
+  curl -s "https://get.sdkman.io" | bash
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+  # 디렉토리 진입 시 .sdkmanrc 자동 적용
+  sed -i '' 's/sdkman_auto_env=false/sdkman_auto_env=true/' "$HOME/.sdkman/etc/config"
+  # 기본 Java 설치
+  sdk install java 21.0.3-amzn
+  sdk install java 17.0.10-amzn
+  sdk install java 11.0.22-amzn
+  sdk default java 21.0.3-amzn
+else
+  echo "SDKMAN already installed."
+fi
+
 # TPM (Tmux Plugin Manager) 설치
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   echo "Installing TPM..."
