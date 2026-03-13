@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# SDKMAN 설치 (Java, Maven, Gradle, Kotlin 버전 관리)
-if [ ! -d "$HOME/.sdkman" ]; then
-  echo "Installing SDKMAN..."
-  curl -s "https://get.sdkman.io" | bash
-  source "$HOME/.sdkman/bin/sdkman-init.sh"
-  # 디렉토리 진입 시 .sdkmanrc 자동 적용
-  sed -i '' 's/sdkman_auto_env=false/sdkman_auto_env=true/' "$HOME/.sdkman/etc/config"
-  # 기본 Java 설치
-  sdk install java 21.0.3-amzn
-  sdk install java 17.0.10-amzn
-  sdk install java 11.0.22-amzn
-  sdk default java 21.0.3-amzn
+# mise 런타임 설치 (Java, Maven, Gradle)
+if command -v mise &>/dev/null; then
+  echo "Installing runtimes via mise..."
+  mise use --global java@corretto-21
+  mise use --global java@corretto-17
+  mise use --global java@corretto-11
+  mise use --global node@lts
+  mise use --global python@latest
+  mise use --global maven@latest
+  mise use --global gradle@latest
 else
-  echo "SDKMAN already installed."
+  echo "mise not found. Run 'brew bundle' first."
 fi
 
 # TPM (Tmux Plugin Manager) 설치

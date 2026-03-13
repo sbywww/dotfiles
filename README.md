@@ -6,22 +6,35 @@
 
 ```
 ~/dotfiles/
+├── bootstrap.sh          # 초기 설정 스크립트
 ├── Brewfile              # Homebrew 패키지 목록
 ├── git/                  # Git 설정
 │   ├── .gitconfig
 │   └── .gitconfig.user.example
 ├── ghostty/              # 터미널 에뮬레이터
 │   └── .config/ghostty/config
+├── karabiner/            # 키보드 커스터마이저
+│   └── .config/karabiner/karabiner.json
 ├── neovim/               # Neovim 에디터
 │   └── .config/nvim/
 │       ├── init.lua
 │       ├── lazy-lock.json
 │       ├── lazyvim.json
-│       └── lua/config/
-│           ├── autocmds.lua
-│           ├── keymaps.lua
-│           ├── lazy.lua
-│           └── options.lua
+│       └── lua/
+│           ├── config/
+│           │   ├── autocmds.lua
+│           │   ├── keymaps.lua
+│           │   ├── lazy.lua
+│           │   └── options.lua
+│           └── plugins/
+│               ├── colorscheme.lua
+│               ├── explorer.lua
+│               ├── harpoon.lua
+│               ├── inc-rename.lua
+│               ├── incline.lua
+│               ├── kotlin.lua
+│               ├── oil.lua
+│               └── ufo.lua
 ├── sheldon/              # Zsh 플러그인 매니저
 │   └── .config/sheldon/plugins.toml
 ├── starship/             # 쉘 프롬프트
@@ -71,6 +84,7 @@ stow sheldon
 stow starship
 stow tmux
 stow ghostty
+stow karabiner
 stow neovim
 stow vim
 stow yazi
@@ -79,7 +93,7 @@ stow yazi
 ### 5. 초기 설정
 
 ```bash
-bash install.sh
+bash bootstrap.sh
 ```
 
 ### 6. Git 사용자 정보 설정
@@ -148,7 +162,9 @@ starship preset catppuccin-powerline -o ~/.config/starship.toml
 | [starship](https://starship.rs) | 크로스쉘 프롬프트 |
 | [tmux](https://github.com/tmux/tmux) | 터미널 멀티플렉서 |
 | [neovim](https://neovim.io) | 하이퍼텍스트 에디터 |
-| [fnm](https://github.com/Schniz/fnm) | Node.js 버전 매니저 |
+| [mise](https://mise.jdx.dev) | 런타임 버전 매니저 |
+| [lazygit](https://github.com/jesseduffield/lazygit) | 터미널 Git UI |
 | [bash](https://www.gnu.org/software/bash/) | 최신 Bash (tmux 플러그인 호환) |
 | [ghostty](https://ghostty.org) | 터미널 에뮬레이터 |
+| [karabiner-elements](https://karabiner-elements.pqrs.org) | 키보드 커스터마이저 |
 | [yazi](https://github.com/sxyazi/yazi) | 터미널 파일 매니저 |

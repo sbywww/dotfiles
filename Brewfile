@@ -28,7 +28,7 @@ brew "lazygit"       # 터미널 Git UI
 brew "neovim"        # 하이퍼텍스트 에디터
 
 # ---- CLI 도구: 런타임 & 개발 ----
-brew "fnm"           # Node.js 버전 매니저
+brew "mise"          # 런타임 버전 매니저 (Java, Node.js, Python, Maven, Gradle, Go)
 brew "jdtls"         # Java LSP (Eclipse JDT Language Server)
 
 # ---- Cask: GUI 앱 ----
