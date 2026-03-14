@@ -42,6 +42,7 @@ alias tl="tmux list-sessions"
 alias g="git"
 alias cl="claude"
 alias cld="claude --dangerously-skip-permissions --teammate-mode tmux"
+alias vim="nvim"
 
 # --- Yazi wrapper (cd to last dir on exit) ---
 function y() {
