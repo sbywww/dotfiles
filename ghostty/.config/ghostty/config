@@ -38,3 +38,6 @@ copy-on-select = clipboard
 # macOS Option 키를 Alt로 사용 (fzf Alt+C 등)
 macos-option-as-alt = true
 
+# keybind
+keybind = super+c=copy_to_clipboard
+
