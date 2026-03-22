@@ -1,43 +1,49 @@
-# fonts
+# ---- 테마 설정 ----
+#theme = Catppuccin Mocha
+theme = Rose Pine
+
+background-opacity = 0.88
+background-blur-radius = 25
+# background = #000000
+
+# ---- 폰트 설정 ----
 # font-family = "MesloLGS NF"
 font-family = "JetBrainsMono Nerd Font"
 font-family = "Noto Sans KR"
 font-size = 16
 font-synthetic-style = bold,italic,bold-italic
+#font-feature = -liga,-calt,-dlig
 
-# theme
-theme = Catppuccin Mocha
+# ---- 커서 설정 -----
+cursor-style = block
+# 커서 깜빡임 끔
+cursor-style-blink = false 
+# 커서 색상 = 셀의 글자색
+cursor-color = cell-foreground
+# 커서 위 글자색 = 셀의 배경색
+cursor-text = cell-background
 
-# Font and cell adjustments for Korean text
+# ---- 셀 설정 (한국어 깨짐 이슈) ----
 adjust-cell-width = 0%
 adjust-cell-height = 35%
 grapheme-width-method = unicode
 
-# shell integration & cursor
-shell-integration-features = no-cursor,sudo,no-title
-cursor-style = block
+# ---- 쉘 설정 ----
+shell-integration-features = no-cursor
 
-# mouse
+# ---- 마우스 설정 ----
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 
-# window
+# ---- 윈도우 설정 ----
 window-padding-balance = true
-window-save-state = always
 window-colorspace = "display-p3"
+
+# ---- Mac Os 설정 ----
 macos-titlebar-style = hidden
-
-# background
-background-opacity = 0.88
-background-blur-radius = 25
-# background = #000000
-
-# clipboard
-copy-on-select = clipboard
-
-# macOS Option 키를 Alt로 사용 (fzf Alt+C 등)
 macos-option-as-alt = true
 
-# keybind
+# ---- 키 바인딩 ----
 keybind = super+c=copy_to_clipboard
+
 
