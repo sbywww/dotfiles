@@ -23,6 +23,7 @@ brew "stow"          # Dotfiles 심링크 관리
 brew "tmux"          # 터미널 멀티플렉서
 brew "yazi"          # 터미널 파일 매니저
 brew "lazygit"       # 터미널 Git UI
+brew "htop"          # 시스템 모니터 (프로세스 뷰어)
 
 # ---- CLI 도구: Git ----
 brew "gh"            # GitHub CLI
