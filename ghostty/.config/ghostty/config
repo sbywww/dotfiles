@@ -1,9 +1,10 @@
 # ---- 테마 설정 ----
 #theme = Catppuccin Mocha
-theme = Rose Pine
+#theme = Rose Pine
+theme = Dracula
 
-background-opacity = 0.88
-background-blur-radius = 25
+#background-opacity = 0.88
+#background-blur-radius = 25
 # background = #000000
 
 # ---- 폰트 설정 ----
