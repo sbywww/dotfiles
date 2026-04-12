@@ -1,7 +1,8 @@
 # ---- 테마 설정 ----
 #theme = Catppuccin Mocha
 #theme = Rose Pine
-theme = Dracula
+#theme = Dracula
+theme = Gruvbox Dark Hard
 
 #background-opacity = 0.88
 #background-blur-radius = 25
