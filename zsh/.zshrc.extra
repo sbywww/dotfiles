@@ -1,0 +1,27 @@
+# alias
+alias ls="eza --icons"
+alias ll="eza --icons -la"
+alias cat="bat"
+alias diff="delta"
+alias vim="nvim"
+
+alias g="git"
+
+alias tm="tmux"
+alias ta="tmux attach -t"
+alias tks="tmux kill-server"
+alias tkss="tmux kill-session -t"
+alias tl="tmux list-sessions"
+
+alias cl="claude"
+alias cld="claude --dangerously-skip-permissions --teammate-mode tmux"
+
+
+# --- Yazi wrapper (cd to last dir on exit) ---
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}

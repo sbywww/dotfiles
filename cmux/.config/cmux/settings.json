@@ -183,6 +183,6 @@
   //       "triggerFlash" : "cmd+shift+h",
   //       "useSelectionForFind" : "cmd+e"
       },
-      "showModifierHoldHints" : true
+      // "showModifierHoldHints" : true
     },
 }

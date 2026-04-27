@@ -1,21 +1,20 @@
-# --- Env (machine-specific) ---
-[ -f ~/.env.user ] && source ~/.env.user
-
-# --- History ---
+# Shell history settings
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
 
-# --- Completion ---
+# Zsh completion system
 autoload -Uz compinit && compinit
 
-# --- Plugin ---
+# Sheldon — zsh plugin manager
 eval "$(sheldon source)"
 
-# --- Tools ---
+# Zoxide — smarter cd with frecency
 eval "$(zoxide init zsh)"
+
+# Fzf — fuzzy finder
 eval "$(fzf --zsh)"
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -23,34 +22,17 @@ export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 
-# --- Path ---
+# PATH
 export PATH="$HOME/.local/bin:$PATH"
 
-# --- Prompt (항상 마지막) ---
+# Starship — cross-shell prompt
 eval "$(starship init zsh)"
 
-# --- Aliases ---
-alias ls="eza --icons"
-alias ll="eza --icons -la"
-alias cat="bat"
-alias diff="delta"
-alias tm="tmux"
-alias ta="tmux attach -t"
-alias tks="tmux kill-server"
-alias tkss="tmux kill-session -t"
-alias tl="tmux list-sessions"
-alias g="git"
-alias cl="claude"
-alias cld="claude --dangerously-skip-permissions --teammate-mode tmux"
-alias vim="nvim"
-
-# --- Yazi wrapper (cd to last dir on exit) ---
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
-}
-
+# Mise — runtime version manager
 eval "$(mise activate zsh)"
+
+# Extra — personal preferences (shared in dotfiles)
+[[ -f ~/.zshrc.extra ]] && source ~/.zshrc.extra
+
+# Local — machine-specific overrides (not shared)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
