@@ -83,6 +83,7 @@ ssh_symbol = " "
 
 [java]
 symbol = " "
+disabled = true
 
 [julia]
 symbol = " "
