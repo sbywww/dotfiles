@@ -24,6 +24,10 @@
   //     "warnBeforeQuit" : true
   //   },
 
+  "app": {
+    "openMarkdownInCmuxViewer": true
+  },
+
   //   "notifications" : {
   //     "command" : "",
   //     "customSoundFilePath" : "",

@@ -22,14 +22,10 @@ brew "stow"          # Dotfiles 심링크 관리
 # ---- CLI 도구: 터미널 ----
 brew "tmux"          # 터미널 멀티플렉서
 brew "yazi"          # 터미널 파일 매니저
-brew "lazygit"       # 터미널 Git UI
 brew "htop"          # 시스템 모니터 (프로세스 뷰어)
 
 # ---- CLI 도구: Git ----
 brew "gh"            # GitHub CLI
-
-# ---- CLI 도구: 에디터 ----
-brew "neovim"        # 하이퍼텍스트 에디터
 
 # ---- CLI 도구: 런타임 & 개발 ----
 brew "mise"          # 런타임 버전 매니저 (Java, Node.js, Python, Maven, Gradle, Go)
