@@ -14,6 +14,15 @@ else
   echo "mise not found. Run 'brew bundle' first."
 fi
 
+# vim-plug 설치
+if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then
+  echo "Installing vim-plug..."
+  curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+else
+  echo "vim-plug already installed."
+fi
+
 # TPM (Tmux Plugin Manager) 설치
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   echo "Installing TPM..."

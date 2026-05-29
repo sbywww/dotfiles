@@ -5,8 +5,26 @@ set relativenumber
 set mouse=a
 set termguicolors
 set background=dark
-colorscheme habamax
+
+" ===== 플러그인 =====
+if filereadable(expand('~/.vim/autoload/plug.vim'))
+  call plug#begin('~/.vim/plugged')
+  Plug 'nordtheme/vim'
+  Plug 'vim-airline/vim-airline'
+  call plug#end()
+endif
+
+" ===== 테마 =====
+try
+  colorscheme nord
+catch
+  colorscheme habamax
+endtry
 highlight Normal guibg=NONE ctermbg=NONE
+
+" ===== 상태줄 =====
+let g:airline_theme = 'nord'
+let g:airline_powerline_fonts = 1
 
 " ===== 리더키 =====
 let mapleader = " "
