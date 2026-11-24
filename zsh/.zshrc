@@ -36,3 +36,5 @@ eval "$(mise activate zsh)"
 
 # Local — machine-specific overrides (not shared)
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+# Unity CLI
+if [ -f "/Users/soobinyoon/.unity/env" ]; then . "/Users/soobinyoon/.unity/env"; fi
